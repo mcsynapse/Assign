@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments (C Lab)</title>
+    <!-- Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        pastel: {
+                            bg: '#FDF6F0',       // Soft Cream
+                            card: '#FFFFFF',     // White
+                            primary: '#88D8B0',  // Pastel Mint
+                            secondary: '#FFCC5C',// Pastel Yellow/Orange
+                            accent: '#FF6F69',   // Pastel Red/Pink
+                            text: '#4A4A4A',     // Soft Dark Grey
+                            blue: '#A8D8EA',     // Pastel Blue
+                            purple: '#AA96DA',   // Pastel Purple
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .btn-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-pastel-bg text-pastel-text min-h-screen flex flex-col items-center justify-between font-sans selection:bg-pastel-purple selection:text-white">
+
+    <!-- Decorative Background Elements -->
+    <div class="fixed top-0 left-0 w-64 h-64 bg-pastel-blue rounded-full mix-blend-multiply filter blur-3xl opacity-30 -translate-x-1/2 -translate-y-1/2 z-0 animate-blob"></div>
+    <div class="fixed bottom-0 right-0 w-64 h-64 bg-pastel-purple rounded-full mix-blend-multiply filter blur-3xl opacity-30 translate-x-1/2 translate-y-1/2 z-0 animate-blob animation-delay-2000"></div>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow flex items-center justify-center w-full px-4 z-10 relative">
+        <div class="max-w-md w-full bg-white rounded-3xl shadow-xl overflow-hidden float-animation border border-white/50 backdrop-blur-sm">
+            
+            <!-- Header Section -->
+            <div class="bg-gradient-to-r from-pastel-blue to-pastel-purple p-8 text-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-white opacity-10 pattern-dots"></div>
+                <div class="relative z-10">
+                    <div class="w-16 h-16 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-md rotate-3 transform hover:rotate-0 transition-all duration-500">
+                        <i class="fa-solid fa-code text-3xl text-pastel-purple"></i>
+                    </div>
+                    <h1 class="text-3xl font-bold text-white tracking-wide drop-shadow-sm">Assignments</h1>
+                    <p class="text-white/90 font-light mt-1 text-sm tracking-wider uppercase">C Programming Lab</p>
+                </div>
+            </div>
+
+            <!-- Buttons Section -->
+            <div class="p-8 space-y-6">
+                
+                <!-- Assignment 1 Button -->
+                <a href="./Assign1.zip" download class="group block relative no-underline">
+                    <div class="btn-hover bg-white border-2 border-pastel-blue rounded-2xl p-4 flex items-center justify-between group-hover:bg-pastel-blue group-hover:border-transparent transition-all duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-pastel-blue/20 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                                <i class="fa-solid fa-file-zipper text-pastel-blue group-hover:text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-700 group-hover:text-white transition-colors">Assignment 1</h3>
+                                <p class="text-xs text-gray-400 group-hover:text-white/80 transition-colors">Assign1.zip</p>
+                            </div>
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                            <i class="fa-solid fa-download text-gray-400 group-hover:text-white text-sm"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Assignment 2 Button -->
+                <a href="./C_Lab_Assign_2.rar" download class="group block relative no-underline">
+                    <div class="btn-hover bg-white border-2 border-pastel-primary rounded-2xl p-4 flex items-center justify-between group-hover:bg-pastel-primary group-hover:border-transparent transition-all duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-pastel-primary/20 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                                <i class="fa-solid fa-file-zipper text-pastel-primary group-hover:text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-700 group-hover:text-white transition-colors">Assignment 2</h3>
+                                <p class="text-xs text-gray-400 group-hover:text-white/80 transition-colors">C_Lab_Assign_2.rar</p>
+                            </div>
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                            <i class="fa-solid fa-download text-gray-400 group-hover:text-white text-sm"></i>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Card Footer -->
+            <div class="bg-gray-50 px-8 py-4 text-center border-t border-gray-100">
+                <p class="text-xs text-gray-400">Ensure you have an archiver installed to open files.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 text-center z-10">
+        <div class="inline-flex items-center justify-center space-x-2 bg-white/60 backdrop-blur-sm px-6 py-2 rounded-full shadow-sm">
+            <span class="text-sm text-gray-500 font-light">&copy; <span id="year"></span> Mayukh Choudhury</span>
+            <span class="text-gray-300">|</span>
+            <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-pastel-purple transition-colors">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // JS to auto-update the year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Optional: Simple alert for demo purposes since files might not exist in this preview environment
+        const links = document.querySelectorAll('a[download]');
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Remove this block if you want the actual default browser download behavior immediately
+                // This is just to show interaction in the preview if files are missing.
+                console.log(`Attempting to download: ${link.getAttribute('href')}`);
+            });
+        });
+    </script>
+</body>
+</html>
